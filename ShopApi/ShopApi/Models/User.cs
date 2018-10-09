@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ShopApi.Models
 {
@@ -15,9 +13,7 @@ namespace ShopApi.Models
         public DateTime InsertedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
-        public virtual ICollection<UserRole> UserRoles{ get; set; }
+        public virtual ICollection<UserRole> UserRoles { get; set; }
         public virtual ICollection<SalesOrder> SalesOrders { get; set; }
-
-
     }
 }

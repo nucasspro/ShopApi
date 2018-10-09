@@ -19,7 +19,7 @@ namespace ShopApi.Models
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
 
-        protected ShopDbContext() : base()
+        protected ShopDbContext(ShopDbContext context) : base()
         {
         }
 
@@ -30,11 +30,8 @@ namespace ShopApi.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("Shop");
-            //modelBuilder.Entity<Category>().ToTable("Category");
-            //modelBuilder.Entity<Product>().ToTable("Product");
 
             // Create Category table
-            // Done
             modelBuilder.Entity<Category>(
                 entity =>
                 {
@@ -70,7 +67,6 @@ namespace ShopApi.Models
             );
 
             // Create Product table
-            // Done
             modelBuilder.Entity<Product>(
                 entity =>
                 {
@@ -141,7 +137,6 @@ namespace ShopApi.Models
             );
 
             // Create ProductCategory table
-            // Done
             modelBuilder.Entity<ProductCategory>(
                 entity =>
                 {
@@ -175,7 +170,6 @@ namespace ShopApi.Models
             );
 
             // Create ProductStatus table
-            // Done
             modelBuilder.Entity<ProductStatus>(
                 entity =>
                 {
@@ -206,7 +200,6 @@ namespace ShopApi.Models
             );
 
             // Create Tag table
-            // Done
             modelBuilder.Entity<Tag>(
                 entity =>
                 {
@@ -237,7 +230,6 @@ namespace ShopApi.Models
             );
 
             // Create ProductTag table
-            // Done
             modelBuilder.Entity<ProductTag>(
                 entity =>
                 {
@@ -271,7 +263,6 @@ namespace ShopApi.Models
             );
 
             // Create Role table
-            // Done
             modelBuilder.Entity<Role>(
                 entity =>
                 {
@@ -302,7 +293,6 @@ namespace ShopApi.Models
             );
 
             // Create User table
-            // Done
             modelBuilder.Entity<User>(
                 entity =>
                 {
@@ -353,7 +343,6 @@ namespace ShopApi.Models
             );
 
             // Create UserRole table
-            // Done
             modelBuilder.Entity<UserRole>(
                 entity =>
                 {
@@ -387,7 +376,6 @@ namespace ShopApi.Models
             );
 
             // Create OrderProduct table
-            // Done
             modelBuilder.Entity<OrderProduct>(
                 entity =>
                 {
@@ -452,7 +440,6 @@ namespace ShopApi.Models
             );
 
             // Create CcTransaction table
-            // Done
             modelBuilder.Entity<CcTransaction>(
                 entity =>
                 {
@@ -530,7 +517,6 @@ namespace ShopApi.Models
             );
 
             // Create Session table
-            // Done
             modelBuilder.Entity<Session>(
                 entity =>
                 {
@@ -559,7 +545,6 @@ namespace ShopApi.Models
             );
 
             // Create Coupon table
-            // Done
             modelBuilder.Entity<Coupon>(
                 entity =>
                 {
@@ -624,7 +609,6 @@ namespace ShopApi.Models
             );
 
             // Create SalesOrder table
-            // Done
             modelBuilder.Entity<SalesOrder>(
                 entity =>
                 {
